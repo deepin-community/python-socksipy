@@ -1,5 +1,180 @@
-template-repository (1.0-1) unstable; urgency=medium
+python-socksipy (1.7.1+dfsg-1) unstable; urgency=medium
 
-  * Initial release
+  [ Ondřej Nový ]
+  * Use debhelper-compat instead of debian/compat.
+  * d/control: Update Maintainer field with new Debian Python Team
+    contact address.
+  * d/control: Update Vcs-* fields with new Debian Python Team Salsa
+    layout.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+  [ Martin ]
+  * New upstream release (Closes: #930781)
+
+ -- Martin <debacle@debian.org>  Sun, 18 Oct 2020 17:32:06 +0000
+
+python-socksipy (1.6.8+dfsg-2) unstable; urgency=medium
+
+  * Team upload.
+  * Drop python2 support; Closes: #938183
+
+ -- Sandro Tosi <morph@debian.org>  Tue, 18 Aug 2020 22:42:18 -0400
+
+python-socksipy (1.6.8+dfsg-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Use python2 in the autopkg test. Closes: #967037.
+
+ -- Matthias Klose <doko@debian.org>  Mon, 10 Aug 2020 11:27:33 +0200
+
+python-socksipy (1.6.8+dfsg-1) unstable; urgency=medium
+
+  * New upstream release (Closes: #856617)
+    Remove 3proxy pre-build binary from source code,
+    which is needed for the tests; tests are disabled
+  * bump dh compat level
+  * bump policy version, no changes
+
+  [ Ondřej Nový ]
+  * d/control: Set Vcs-* to salsa.debian.org
+  * d/copyright: Use https protocol in Format field
+  * d/tests: Use AUTOPKGTEST_TMP instead of ADTTMP
+  * Convert git repository from git-dpm to gbp layout
+
+ -- W. Martin Borgert <debacle@debian.org>  Sat, 08 Sep 2018 00:06:51 +0000
+
+python-socksipy (1.6.5-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream release
+
+ -- W. Martin Borgert <debacle@debian.org>  Sat, 24 Dec 2016 12:48:46 +0000
+
+python-socksipy (1.6.4-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream release
+
+ -- W. Martin Borgert <debacle@debian.org>  Wed, 07 Dec 2016 23:26:20 +0000
+
+python-socksipy (1.5.7+dfsg1-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release
+  * Removed pre-wheezy versioned dependency of python-all
+  * Removed test/mocks binary from upstream tarball
+  * Removed d/README.md to source package, it's back in orig tarball
+  * d/copyright: Added copyright for test/httpproxy.py
+
+ -- Ondřej Nový <onovy@debian.org>  Sun, 07 Aug 2016 12:54:51 +0200
+
+python-socksipy (1.5.6-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release
+  * Fixed VCS URL (https)
+  * Removed d/README.source - it's not relevant now
+  * d/copyright
+    - Added debian/* section
+    - Added myself to Debian part
+  * d/watch: Changed to pypi.debian.net
+  * Added d/README.md to source package, because it's not in orig from pypi
+  * Added simple Debian tests
+  * Standards-Version is 3.9.8 now (no change)
+
+ -- Ondřej Nový <novy@ondrej.org>  Sat, 30 Apr 2016 23:21:54 +0200
+
+python-socksipy (1.5.0+dfsg-4) unstable; urgency=medium
+
+  * Team upload.
+  * Add python-socks Breaks/Replaces: python-pysocks/python-socksipy and
+    python3-socks Breaks/Replaces: python3-pysocks/python3-socksipy to fix
+    upgradability of rename binaries (Closes: #810358)
+
+ -- Scott Kitterman <scott@kitterman.com>  Sat, 09 Jan 2016 23:43:37 -0500
+
+python-socksipy (1.5.0+dfsg-3) unstable; urgency=medium
+
+  * Team upload.
+  * Change python:Depends to python3:Depends for python3-socks so proper
+    interpreter depedencies are generated
+
+ -- Scott Kitterman <scott@kitterman.com>  Fri, 08 Jan 2016 01:04:51 -0500
+
+python-socksipy (1.5.0+dfsg-2) unstable; urgency=medium
+
+  * rename binary packages from python-socksipy and
+    python3-socksipy to python-socks and python3-socks
+  * use pybuild
+
+ -- W. Martin Borgert <debacle@debian.org>  Thu, 07 Jan 2016 23:45:25 +0000
+
+python-socksipy (1.5.0+dfsg-1) unstable; urgency=medium
+
+  * adoption by DPMT (Closes: #700554)
+  * switch to new upstream and upstream version (Closes: #808872)
+  * drop unicode patch, fixed by upstream, minor changes
+
+ -- W. Martin Borgert <debacle@debian.org>  Sun, 27 Dec 2015 23:27:03 +0000
+
+python-socksipy (1.02-2) unstable; urgency=low
+
+  * QA upload.
+  * Add support for python3: (Closes: #766752)
+    - New patch unicode_domain for unicode destination address, which is python3
+      default.
+    - New python3-socksipy binary package in control
+    - Updated debian/rules for python2 + python3 packages.
+  * Bump standards-version to 3.9.6: No change required.
+  * Updated copyright file to DEP5 format.
+
+ -- Jean-Michel Nirgal Vourgère <jmv_deb@nirgal.com>  Sat, 25 Oct 2014 18:22:12 +0200
+
+python-socksipy (1.02-1) unstable; urgency=medium
+
+  [ Jari Aalto ]
+  * Remove deprecated dpatch and upgrade to packaging format "3.0
+    quilt". (Closes: #664379)
+
+  [ Dimitri John Ledkov ]
+  * QA upload.
+  * New upstream release. (Closes: #604836)
+  * Update upstream in watch file.
+  * Drop setup.py patch.
+  * New upstream release.
+  * Rebuild tarball, with corrected file permissions.
+
+ -- Dimitri John Ledkov <dimitri.j.ledkov@linux.intel.com>  Mon, 13 Oct 2014 12:26:15 +0100
+
+python-socksipy (1.0-2) unstable; urgency=low
+
+  * Orphan package (cf. #700554).
+
+  [ Sandro Tosi ]
+  * debian/control
+    - switch Vcs-Browser field to viewsvn
+
+  [ Jakub Wilk ]
+  * Use canonical URIs for Vcs-* fields.
+
+  [ Andrea Colangelo ]
+  * Convert to dh_python2 (Closes: #617030). Patch from Ubuntu, thanks to
+    Andrew Starr-Bochicchio for forwarding it.
+
+  [ Sebastian Ramacher ]
+  * debian/rules: Convert to dh(1).
+  * debian/control:
+    - Change Maintainer to Debian QA Group and remove Uploaders.
+    - Bump Standards-Version to 3.9.4.
+    - Bump dpatch in Build-Depends to >= 2.0.32 for dh integration.
+    - Bump debhelper in Build-Depends to >= 9.
+    - Add ${misc:Depends} to Depends.
+    - Remove Provides.
+    - Remove XS-Python-Version.
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Wed, 26 Jun 2013 16:58:19 +0200
+
+python-socksipy (1.0-1) unstable; urgency=low
+
+  * Initial release (Closes: #467222)
+
+ -- Thomas Bläsing <thomasbl@pool.math.tu-berlin.de>  Tue, 14 Oct 2008 00:07:51 +0200

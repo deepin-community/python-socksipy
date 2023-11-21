@@ -1,0 +1,2 @@
+Depends: python3-socks
+Test-Command: cd "$AUTOPKGTEST_TMP" ; python3 -c "import socks ; print(socks.__version__)"
